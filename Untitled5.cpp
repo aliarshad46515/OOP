@@ -43,14 +43,15 @@ void getStudentData(){
 	cin>>sap;
 	fout<<sap;
 	cout<<"\nName : ";
-	cin>>name;
-	fout<<" "<<name;
+	cin.ignore();
+	getline(cin, name);
+	fout<<","<<name;
 	cout<<"\nSemester : ";
 	cin>>semester;
-	fout<<" "<<semester;
+	fout<<","<<semester;
 	cout<<"\nCGPA : ";
 	cin>>cgpa;
-	fout<<" "<<cgpa;
+	fout<<","<<cgpa;
 	
 	fout.close();
 }
@@ -72,8 +73,12 @@ void showStudentData(){
 	string n;
 	int sem;
 	float c;
+	char temp;
 	
-	ss>>s>>n>>sem>>c;
+	ss>>s;
+	ss>>temp;
+	getline(ss,n,',');
+	ss>>sem>>temp>>c;
 	cout<<"\n-------Splitting-------"<<endl;
 	cout<<s<<endl<<n<<endl<<sem<<endl<<c<<endl;
 	cout<<"-----------------------"<<endl;
