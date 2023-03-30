@@ -52,6 +52,8 @@ int main(){
 	
 	TotalBill();
 	
+	cout<<"\n\n Thank You for using SYD Family Medical Centre"<<endl;
+	
 	return 0;
 }
 
