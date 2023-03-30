@@ -1,5 +1,4 @@
 #include <iostream>
-#include <string>
 using namespace std;
 
 float Total_Amount=0.0;
