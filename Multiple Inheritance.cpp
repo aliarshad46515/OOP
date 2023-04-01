@@ -240,6 +240,7 @@ int main(){
 	cout<<"Public Member of Class C: "<<d1.expiry<<endl;
 	cout<<"Public Member of Class D: "<<d1.mfg<<endl;
 	cout<<"---------------------------------"<<endl;
+
 		
 	return 0;
 }
