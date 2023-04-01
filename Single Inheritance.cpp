@@ -44,8 +44,8 @@ class A{
 		
 };
 class B: public A{
-private:
-		string ID="1234";
+	private:
+		string ID;
 		void Id(){
 			cout<<"Private Function of Class B: ";
 			cout<<ID<<endl;
