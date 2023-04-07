@@ -3,13 +3,20 @@
 	Bowler::Bowler(): bowlingStyle("\0"), aveSpeed(0), totalWickets(0), bowlingAverage(0.0), strikeRate(0.0)
 	{
 	}
-	Bowler::Bowler(int jerseyNo, string name, int ranking, string bowlingStyle, float aveSpeed, int totalWickets, float bowlingAverage, float strikeRate)
+	Bowler::Bowler(int jerseyNo, string name, int Test, int ODI, int T20, string bowlingStyle, float aveSpeed, int totalWickets, float bowlingAverage, float strikeRate)
 	{
 		this->jerseyNo=jerseyNo;
 		this->name=name;
 		for(int i = 0; i<3; i++){
-			this->ranking[i]=ranking;
-		}
+				if(i<1){
+					ranking[i]=Test;
+				}
+				else if(i<2){
+					ranking[i]=ODI;
+				}
+				else
+					ranking[i]=T20;
+			}
 		this->bowlingStyle=bowlingStyle;
 		this->aveSpeed=aveSpeed;
 		this->totalWickets=totalWickets;

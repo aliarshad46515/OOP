@@ -3,12 +3,19 @@
 		AllRounder::AllRounder()
 		{
 		}
-		AllRounder::AllRounder(int jerseyNo, string name, int ranking, string battingStyle, int battingNo, int totalScore, float average, float BatstrikeRate, string bowlingStyle, float aveSpeed, int totalWickets, float bowlingAverage, float strikeRate)
+		AllRounder::AllRounder(int jerseyNo, string name, int Test, int ODI, int T20, string battingStyle, int battingNo, int totalScore, float average, float BatstrikeRate, string bowlingStyle, float aveSpeed, int totalWickets, float bowlingAverage, float strikeRate)
 		{
 			this->jerseyNo=jerseyNo;
 			this->name=name;
 			for(int i = 0; i<3; i++){
-				this->ranking[i]=ranking;
+				if(i<1){
+					ranking[i]=Test;
+				}
+				else if(i<2){
+					ranking[i]=ODI;
+				}
+				else
+					ranking[i]=T20;
 			}
 			this->battingStyle=battingStyle;
 			this->battingNo=battingNo;

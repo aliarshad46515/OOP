@@ -14,7 +14,7 @@ class Bowler: virtual public Player{
 		
 		Bowler();
 		
-		Bowler(int jerseyNo, string name, int ranking, string bowlingStyle, float aveSpeed, int totalWickets, float bowlingAverage, float strikeRate);
+		Bowler(int jerseyNo, string name, int Test, int ODI, int T20, string bowlingStyle, float aveSpeed, int totalWickets, float bowlingAverage, float strikeRate);
 		
 		void BowlgetInfo();
 		

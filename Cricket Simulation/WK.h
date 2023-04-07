@@ -12,7 +12,7 @@ class WicketKeeper: public Player{
 	public:
 		WicketKeeper();
 		
-		WicketKeeper(int jerseyNo, string name, int ranking, string battingStyle, int totalCatches, int totalStumps);
+		WicketKeeper(int jerseyNo, string name, int Test, int ODI, int T20, string battingStyle, int totalScore, int totalCatches, int totalStumps);
 		
 		void getInfo();
 		

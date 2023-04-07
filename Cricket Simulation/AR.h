@@ -8,7 +8,7 @@ class AllRounder: public Batsmen, public Bowler{
 	public:
 		AllRounder();
 		
-		AllRounder(int jerseyNo, string name, int ranking, string battingStyle, int battingNo, int totalScore, float average, float BatstrikeRate, string bowlingStyle, float aveSpeed, int totalWickets, float bowlingAverage, float strikeRate);
+		AllRounder(int jerseyNo, string name, int Test, int ODI, int T20, string battingStyle, int battingNo, int totalScore, float average, float BatstrikeRate, string bowlingStyle, float aveSpeed, int totalWickets, float bowlingAverage, float strikeRate);
 		
 		void getInfo();
 		

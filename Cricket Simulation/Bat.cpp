@@ -3,13 +3,20 @@
 	Batsmen::Batsmen(): battingStyle("\0"), battingNo(0), totalScore(0), average(0.0), BatstrikeRate(0.0)
 	{
 	}
-	Batsmen::Batsmen(int jerseyNo, string name, int ranking, string battingStyle, int battingNo, int totalScore, float average, float BatstrikeRate)
+	Batsmen::Batsmen(int jerseyNo, string name, int Test, int ODI, int T20, string battingStyle, int battingNo, int totalScore, float average, float BatstrikeRate)
 	{
 		this->jerseyNo=jerseyNo;
 		this->name=name;
 		for(int i = 0; i<3; i++){
-			this->ranking[i]=ranking;
-		}
+				if(i<1){
+					ranking[i]=Test;
+				}
+				else if(i<2){
+					ranking[i]=ODI;
+				}
+				else
+					ranking[i]=T20;
+			}
 		this->battingStyle=battingStyle;
 		this->battingNo=battingNo;
 		this->totalScore=totalScore;

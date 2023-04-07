@@ -13,7 +13,7 @@ class Batsmen: virtual public Player{
 	public:
 		Batsmen();
 		
-		Batsmen(int jerseyNo, string name, int ranking, string battingStyle, int battingNo, int totalScore, float average, float BatstrikeRate);
+		Batsmen(int jerseyNo, string name, int Test, int ODI, int T20, string battingStyle, int battingNo, int totalScore, float average, float BatstrikeRate);
 		
 		void BatgetInfo();
 		

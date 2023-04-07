@@ -1,17 +1,25 @@
 #include "WK.h"		
 		
-		WicketKeeper::WicketKeeper(): battingStyle("\0"), totalCatches(0), totalStumps(0)
+		WicketKeeper::WicketKeeper(): battingStyle("\0"), totalScore(0), totalCatches(0), totalStumps(0)
 		{
 			
 		}
 		
-		WicketKeeper::WicketKeeper(int jerseyNo, string name, int ranking, string battingStyle, int totalCatches, int totalStumps){
+		WicketKeeper::WicketKeeper(int jerseyNo, string name, int Test, int ODI, int T20, string battingStyle,int totalScore, int totalCatches, int totalStumps){
 			this->jerseyNo=jerseyNo;
 			this->name=name;
 			for(int i = 0; i<3; i++){
-			this->ranking[i]=ranking;
+				if(i<1){
+					ranking[i]=Test;
+				}
+				else if(i<2){
+					ranking[i]=ODI;
+				}
+				else
+					ranking[i]=T20;
 			}
 			this->battingStyle=battingStyle;
+			this->totalScore=totalScore;
 			this->totalCatches=totalCatches;
 			this->totalStumps=totalStumps;
 		}
@@ -37,6 +45,8 @@
 			}
 			cout << "Enter Batting Style (Left/Right): ";
 			cin >> battingStyle;
+			cout << "Enter Total Score: ";
+			cin >> totalScore;
 			cout << "Enter Total Catches: ";
 			cin >> totalCatches;
 			cout << "Enter Total Stumps: ";
@@ -64,6 +74,7 @@
 			}				
 			}
 			cout << "Batting Style: " << battingStyle << endl;
+			cout << "Total Score: " << totalScore << endl;
 			cout << "Total Catches: " << totalCatches << endl;
 			cout << "Total Stumps: " << totalStumps << endl;
 		}
